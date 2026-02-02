@@ -1,4 +1,5 @@
-import { Box, useTheme } from "@mui/system";
+import { Box } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import H4 from "components/typographies/H4";
 import React from "react";
 import { CustomBoxFullWidth } from "styled-components/CustomStyles.style";
