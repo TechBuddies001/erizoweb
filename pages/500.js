@@ -3,7 +3,7 @@ import { Button, Container, Stack, Typography } from "@mui/material";
 import { CustomStackFullWidth } from "../src/styled-components/CustomStyles.style";
 import FiveHundred from "../src/assets/img/500.svg";
 import { useTranslation } from "react-i18next";
-import { useTheme } from "@emotion/react";
+import { useTheme } from "@mui/material/styles";
 import { useRouter } from "next/router";
 
 export default function Custom500() {
