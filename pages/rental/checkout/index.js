@@ -50,4 +50,11 @@ const index = () => {
   );
 };
 
+// Disable static generation for this page to avoid SSR context errors
+export async function getServerSideProps() {
+  return {
+    props: {},
+  };
+}
+
 export default index;
