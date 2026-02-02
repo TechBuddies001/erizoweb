@@ -8,7 +8,7 @@ import { CustomBoxFullWidth } from "styled-components/CustomStyles.style";
 import CustomPhoneInput from "components/custom-component/CustomPhoneInput";
 import { getLanguage } from "helper-functions/getLanguage";
 import HttpsIcon from "@mui/icons-material/Https";
-import { useTheme } from "@emotion/react";
+import { useTheme } from "@mui/material/styles";
 import { formatPhoneNumber } from "utils/CustomFunctions";
 const AccountInfo = ({
   configData,
@@ -59,7 +59,7 @@ const AccountInfo = ({
                   sx={{
                     color:
                       deliveryManFormik.touched.password &&
-                      !deliveryManFormik.errors.password
+                        !deliveryManFormik.errors.password
                         ? theme.palette.primary.main
                         : alpha(theme.palette.neutral[400], 0.7),
                     fontSize: "18px",

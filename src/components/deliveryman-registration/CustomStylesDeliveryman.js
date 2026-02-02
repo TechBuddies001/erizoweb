@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import { styled } from "@mui/material/styles";
 import { Box } from "@mui/system";
 
 export const RegistrationCardWrapper = styled(Box)(({ theme }) => ({

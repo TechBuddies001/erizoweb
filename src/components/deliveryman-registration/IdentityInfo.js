@@ -19,7 +19,7 @@ import React, { useEffect, useState } from "react";
 import ImageUploaderWithPreview from "components/single-file-uploader-with-preview/ImageUploaderWithPreview";
 import { alpha, Box, display } from "@mui/system";
 import { IDENTITY_TYPE } from "./constants";
-import { useTheme } from "@emotion/react";
+import { useTheme } from "@mui/material/styles";
 import InputLabel from "@mui/material/InputLabel";
 import MultiFileUploader from "components/multi-file-uploader/MultiFileUploader";
 import { DeliveryCaption } from "components/checkout/CheckOut.style";
@@ -74,7 +74,7 @@ const IdentityInfo = ({
                       sx={{
                         color:
                           deliveryManFormik.touched.identity_type &&
-                          !deliveryManFormik.errors.identity_type
+                            !deliveryManFormik.errors.identity_type
                             ? theme.palette.primary.main
                             : alpha(theme.palette.neutral[400], 0.7),
                         fontSize: "18px",
@@ -105,7 +105,7 @@ const IdentityInfo = ({
                         sx={{
                           color:
                             deliveryManFormik.touched.identity_number &&
-                            !deliveryManFormik.errors.identity_number
+                              !deliveryManFormik.errors.identity_number
                               ? theme.palette.primary.main
                               : alpha(theme.palette.neutral[400], 0.7),
                           fontSize: "18px",
