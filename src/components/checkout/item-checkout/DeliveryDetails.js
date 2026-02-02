@@ -19,7 +19,7 @@ import {
 	Typography,
 	useMediaQuery,
 } from "@mui/material";
-import { useTheme } from "@emotion/react";
+import { useTheme } from "@mui/material/styles";
 import RestaurantScheduleTime from "./RestaurantScheduleTime";
 
 import CustomTextFieldWithFormik from "components/form-fields/CustomTextFieldWithFormik";
@@ -81,7 +81,7 @@ const DeliveryDetails = (props) => {
 			<DeliveryCaption const id="demo-row-radio-buttons-group-label">
 				{t("Delivery Options")}
 			</DeliveryCaption>
-			{storeData &&  (
+			{storeData && (
 				<Stack
 					direction="row"
 					width="100%"
@@ -89,7 +89,7 @@ const DeliveryDetails = (props) => {
 					gap={{ xs: "5px", md: "10px" }}
 					sx={{ flexWrap: { xs: "wrap", sm: "wrap", md: "nowrap" } }}
 				>
-					{ isHomeDelivery===1 && (
+					{isHomeDelivery === 1 && (
 						<DeliveryOptionButton
 							fullwidth="true"
 							orderType={orderType === "delivery"}
@@ -153,7 +153,7 @@ const DeliveryDetails = (props) => {
 										color={
 											orderType === "take_away"
 												? theme.palette.whiteContainer
-														.main
+													.main
 												: theme.palette.neutral[700]
 										}
 									>
@@ -163,7 +163,7 @@ const DeliveryDetails = (props) => {
 							)}
 						</>
 					) : null}
-					{!forprescription &&  storeData?.schedule_order && getToken() && (
+					{!forprescription && storeData?.schedule_order && getToken() && (
 						<DeliveryOptionButton
 							fullwidth="true"
 							orderType={orderType === "schedule_order"}

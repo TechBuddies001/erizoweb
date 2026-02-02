@@ -1,7 +1,7 @@
 import React from "react";
 import { CustomBadgeWrapepr } from "../cards/CustomBadge";
 import { useTranslation } from "react-i18next";
-import { useTheme } from "@emotion/react";
+import { useTheme } from "@mui/material/styles";
 
 const OrganicTag = (props) => {
   const { status, top, left } = props;

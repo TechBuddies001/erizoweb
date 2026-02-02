@@ -2,7 +2,7 @@ import { Box, Stack } from "@mui/material";
 import { CustomIconButton } from "../../styled-components/CustomStyles.style";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import styled from "@emotion/styled";
+import { styled } from "@mui/material/styles";
 
 export const LeftArrowStyle = styled(Box)(
     ({ theme, language_direction, left, top }) => ({

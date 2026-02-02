@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useTheme } from "@emotion/react";
-import styled from "@emotion/styled";
+import { styled } from "@mui/material/styles";
 import { Collapse, Stack, Typography } from "@mui/material";
 import { alpha, Box } from "@mui/system";
 import useGetCashbackList from "api-manage/hooks/react-query/cashback/useGetCashbackList";

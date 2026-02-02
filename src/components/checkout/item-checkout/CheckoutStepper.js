@@ -14,7 +14,7 @@ import { t } from "i18next";
 import { Check } from "@mui/icons-material";
 
 import { StepperCustomBorder } from "../CheckOut.style";
-import { useTheme } from "@emotion/react";
+import { useTheme } from "@mui/material/styles";
 import { useRouter } from "next/router";
 
 const CustomStepperLabels = styled(Stepper)(({ theme }) => ({
@@ -35,7 +35,7 @@ const QontoConnector = styled(StepConnector)(({ theme }) => ({
 	},
 	[`&.${stepConnectorClasses.active}`]: {
 		[`& .${stepConnectorClasses.line}`]: {
-			borderColor:theme.palette.primary.main,
+			borderColor: theme.palette.primary.main,
 		},
 	},
 	[`&.${stepConnectorClasses.completed}`]: {
@@ -99,14 +99,14 @@ function QontoStepIcon(props) {
 		</QontoStepIconRoot>
 	);
 }
-const CheckoutStepper = ({text,text1,text2}) => {
+const CheckoutStepper = ({ text, text1, text2 }) => {
 	const [actStep, setActStep] = useState(1);
 	const steps = [
 		{
-			label: text2|| t("Add To cart"),
+			label: text2 || t("Add To cart"),
 		},
 		{
-			label:text || "Fill details",
+			label: text || "Fill details",
 		},
 		{
 			label: text1 || "Confirmation",
@@ -117,7 +117,7 @@ const CheckoutStepper = ({text,text1,text2}) => {
 		if (router.pathname === "/rental/checkout") {
 			setActStep(2)
 		}
-	}, [router.pathname])	
+	}, [router.pathname])
 	return (
 		<CustomStackFullWidth>
 			<CustomStepperLabels

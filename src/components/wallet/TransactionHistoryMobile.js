@@ -1,4 +1,4 @@
-import { useTheme } from "@emotion/react";
+import { useTheme } from "@mui/material/styles";
 import { MenuItem, Typography } from "@mui/material";
 import { Box, Stack } from "@mui/system";
 import React, { useEffect, useState } from "react";
@@ -102,10 +102,10 @@ const TransactionHistoryMobile = ({
                       ? item?.debit
                       : item?.credit
                     : getAmountWithSign(
-                        item?.transaction_type === "point_to_wallet"
-                          ? item?.debit
-                          : item?.credit + item?.admin_bonus
-                      )}
+                      item?.transaction_type === "point_to_wallet"
+                        ? item?.debit
+                        : item?.credit + item?.admin_bonus
+                    )}
                 </Typography>
                 <Typography fontSize="13px" color={theme.palette.neutral[400]}>
                   {item?.created_at}

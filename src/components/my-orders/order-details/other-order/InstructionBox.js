@@ -1,7 +1,7 @@
 import React from "react";
 import { CustomStackFullWidth } from "../../../../styled-components/CustomStyles.style";
 import { Stack } from "@mui/system";
-import styled from "@emotion/styled";
+import { styled } from "@mui/material/styles";
 import { alpha, Typography } from "@mui/material";
 import { t } from "i18next";
 import { useTheme } from "@emotion/react";

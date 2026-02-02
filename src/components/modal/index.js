@@ -1,4 +1,4 @@
-import { useTheme } from "@emotion/react";
+import { useTheme } from "@mui/material/styles";
 import { Clear } from "@mui/icons-material";
 import { Box, Dialog, Stack } from "@mui/material";
 import PropTypes from "prop-types";
@@ -10,7 +10,7 @@ const CustomModal = (props) => {
     closeButton,
     children,
     maxWidth,
-    
+
   } = props;
   const handleCloseModal = (event, reason) => {
     if (reason && reason === "backdropClick") {

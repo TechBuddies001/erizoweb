@@ -10,8 +10,8 @@ import foodBanner from "../assets/food.png";
 import pharmacy from "../assets/par.png";
 import parcelImage from "../assets/parcelBg.png";
 import { BannerCityIcon } from "components/home/module-wise-components/rental/RentalIcons";
-import LeftCar from "/public/static/rental/left_car.png";
-import RightCar from "/public/static/rental/right_car.png";
+import LeftCar from "../../../../public/static/rental/left_car.png";
+import RightCar from "../../../../public/static/rental/right_car.png";
 import { useEffect, useState } from "react";
 import Image from 'next/image'
 
@@ -67,7 +67,7 @@ const TopBanner = () => {
         minHeight: {
           xs: moduleType === "parcel" ? "250px" : "160px",
           sm: "270px",
-          md:"270px"
+          md: "270px"
         },
         backgroundColor: getBGColor(),
         position: "relative",

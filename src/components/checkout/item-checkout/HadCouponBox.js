@@ -5,7 +5,7 @@ import { IconButton, Typography } from "@mui/material";
 import { RoundButton } from "../CheckOut.style";
 import { Stack } from "@mui/system";
 import CheckIcon from "@mui/icons-material/Check";
-import { useTheme } from "@emotion/react";
+import { useTheme } from "@mui/material/styles";
 import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
 import { getAmountWithSign } from "../../../helper-functions/CardHelpers";
 import { t } from "i18next";

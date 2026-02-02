@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 import { useState } from "react";
-import { useTheme } from "@emotion/react";
+import { useTheme } from "@mui/material/styles";
 import { t } from "i18next";
 
 export const ReadMore = ({ children, limits, color }) => {

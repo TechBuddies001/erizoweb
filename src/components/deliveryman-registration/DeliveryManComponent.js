@@ -137,8 +137,8 @@ const DeliveryManComponent = ({ configData }) => {
               onClick={handleReset}
               disabled={isLoading}
               sx={{
-                bgcolor: (theme) => alpha(theme.palette.neutral[200], 0.4),
-                color: (theme) => theme.palette.primary.dark,
+                bgcolor: (theme) => alpha(theme?.palette?.neutral?.[200] || "#E5E7EB", 0.4),
+                color: (theme) => theme?.palette?.primary?.dark || "#1c6641",
                 px: "30px",
 
                 borderRadius: "5px",
@@ -150,14 +150,14 @@ const DeliveryManComponent = ({ configData }) => {
               type="submit"
               disabled={isLoading}
               sx={{
-                background: (theme) => theme.palette.primary.main,
-                color: (theme) => theme.palette.whiteContainer.main,
+                background: (theme) => theme?.palette?.primary?.main || "#039D55",
+                color: (theme) => theme?.palette?.whiteContainer?.main || "#ffffff",
                 px: "30px",
                 borderRadius: "5px",
                 fontWeight: "500",
                 fontSize: "14px",
                 "&:hover": {
-                  background: (theme) => theme.palette.primary.dark, // set hover color here
+                  background: (theme) => theme?.palette?.primary?.dark || "#1c6641", // set hover color here
                 },
               }}
             >

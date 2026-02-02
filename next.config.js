@@ -7,6 +7,7 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production' ? {
       exclude: ['error', 'warn'], // Keep error and warn, remove log, info, debug, etc.
     } : false,
+    styledComponents: true, // Enable styled-components SSR support
   },
   images: {
     remotePatterns: [
@@ -21,6 +22,11 @@ const nextConfig = {
         pathname: '/**',
       },
     ],
+  },
+  // Improve error handling during build
+  onDemandEntries: {
+    maxInactiveAge: 25 * 1000,
+    pagesBufferLength: 2,
   },
 };
 

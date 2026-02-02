@@ -8,7 +8,7 @@ import { useDispatch } from "react-redux";
 import { Stack } from "@mui/system";
 import { alpha, IconButton, Typography } from "@mui/material";
 import deleteIcon from "../../assets/delete.png";
-import { useTheme } from "@emotion/react";
+import { useTheme } from "@mui/material/styles";
 import CustomRatings from "../search/CustomRatings";
 import CustomDivider from "../CustomDivider";
 import { removeWishListStore } from "redux/slices/wishList";

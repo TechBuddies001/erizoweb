@@ -15,7 +15,7 @@ import Link from "next/link";
 import { CustomStackFullWidth } from "styled-components/CustomStyles.style";
 
 import { useTheme } from "@emotion/react";
-import styled from "@emotion/styled";
+import { styled } from "@mui/material/styles";
 import useGetBrandsList from "api-manage/hooks/react-query/brands/useGetBrandsList";
 import CustomContainer from "components/container";
 import { useRouter } from "next/router";
@@ -46,7 +46,7 @@ const Brands = ({ viewAll }) => {
 
 	useEffect(() => {
 		refetch();
-	}, [data,getModuleId()]);
+	}, [data, getModuleId()]);
 
 	const baseUrl = configData?.base_urls?.brand_image_url;
 

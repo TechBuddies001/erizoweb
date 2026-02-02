@@ -6,7 +6,7 @@ import CustomImageContainer from "../../CustomImageContainer";
 import { Button, Typography } from "@mui/material";
 import { t } from "i18next";
 import { GrayButton } from "../../address";
-import { useTheme } from "@emotion/react";
+import { useTheme } from "@mui/material/styles";
 import { getAmountWithSign } from "../../../helper-functions/CardHelpers";
 import PartialSvg from "../assets/PartialSvg";
 

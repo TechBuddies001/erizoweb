@@ -27,7 +27,7 @@ import {
 import useGetVehicleCharge from "../../../api-manage/hooks/react-query/order-place/useGetVehicleCharge";
 import CustomModal from "../../modal";
 import CustomImageContainer from "../../CustomImageContainer";
-import { useTheme } from "@emotion/react";
+import { useTheme } from "@mui/material/styles";
 import { PrimaryButton } from "../../Map/map.style";
 import TrackParcelOrderDrawer from "../../home/module-wise-components/parcel/TrackParcelOrderDrawer";
 import { getGuestId, getToken } from "helper-functions/getToken";
@@ -254,9 +254,9 @@ const ParcelCheckout = () => {
   });
   const isDigital =
     paymentMethod !== "cash_on_delivery" &&
-    paymentMethod !== "wallet" &&
-    paymentMethod !== "offline_payment" &&
-    paymentMethod !== null
+      paymentMethod !== "wallet" &&
+      paymentMethod !== "offline_payment" &&
+      paymentMethod !== null
       ? "digital_payment"
       : paymentMethod;
   const orderMutationObject = {
@@ -323,11 +323,9 @@ const ParcelCheckout = () => {
             const callBackUrl = token
               ? `${window.location.origin}/profile?page=${page}`
               : `${window.location.origin}/home`;
-            const url = `${baseUrl}/payment-mobile?order_id=${
-              res?.order_id
-            }&customer_id=${
-              profileInfo?.id ?? res?.user_id ? res?.user_id : guest_id
-            }&payment_platform=${payment_platform}&callback=${callBackUrl}&payment_method=${paymentMethod}`;
+            const url = `${baseUrl}/payment-mobile?order_id=${res?.order_id
+              }&customer_id=${profileInfo?.id ?? res?.user_id ? res?.user_id : guest_id
+              }&payment_platform=${payment_platform}&callback=${callBackUrl}&payment_method=${paymentMethod}`;
             router.push(url, undefined, { shallow: true });
           } else if (paymentMethod === "wallet") {
             if (
@@ -483,16 +481,16 @@ const ParcelCheckout = () => {
   };
   const finalTotal = profileInfo?.is_valid_for_discount
     ? parcelDeliveryFree() +
-      Number(deliveryTip) +
-      (configData?.additional_charge ? configData?.additional_charge : 0) -
-      getReferDiscount(
-        parcelDeliveryFree(),
-        profileInfo?.discount_amount,
-        profileInfo?.discount_amount_type
-      )
+    Number(deliveryTip) +
+    (configData?.additional_charge ? configData?.additional_charge : 0) -
+    getReferDiscount(
+      parcelDeliveryFree(),
+      profileInfo?.discount_amount,
+      profileInfo?.discount_amount_type
+    )
     : parcelDeliveryFree() +
-      Number(deliveryTip) +
-      (configData?.additional_charge ? configData?.additional_charge : 0);
+    Number(deliveryTip) +
+    (configData?.additional_charge ? configData?.additional_charge : 0);
 
   const getParcelPayment = () => {
     // Check if zoneData and zone_data are available
@@ -504,15 +502,13 @@ const ParcelCheckout = () => {
     );
   };
   const extraText = t("This charge includes extra vehicle charge");
-  const deliveryToolTipsText = `${extraText} ${getAmountWithSign(extraCharge)}${
-    surgePrice?.customer_note_status !== 0
-      ? ` ${surgePrice?.customer_note} ${
-          surgePrice?.type === "amount"
-            ? getAmountWithSign(surgePrice?.price)
-            : `${surgePrice?.price}%`
-        }`
+  const deliveryToolTipsText = `${extraText} ${getAmountWithSign(extraCharge)}${surgePrice?.customer_note_status !== 0
+      ? ` ${surgePrice?.customer_note} ${surgePrice?.type === "amount"
+        ? getAmountWithSign(surgePrice?.price)
+        : `${surgePrice?.price}%`
+      }`
       : ""
-  }`;
+    }`;
   return (
     <>
       {method === "offline" ? (
@@ -609,7 +605,7 @@ const ParcelCheckout = () => {
                         </Typography>
                       </Stack>
                       {taxData?.tax_included !== null &&
-                      taxData?.tax_included === 0 ? (
+                        taxData?.tax_included === 0 ? (
                         <>
                           <Stack direction="row" justifyContent="space-between">
                             <Typography fontWeight="500">
@@ -664,11 +660,11 @@ const ParcelCheckout = () => {
                         <Typography fontWeight="500" color="primary">
                           {getAmountWithSign(
                             parcelDeliveryFree() +
-                              Number(deliveryTip) +
-                              taxData?.tax_amount +
-                              (configData?.additional_charge
-                                ? configData?.additional_charge
-                                : 0)
+                            Number(deliveryTip) +
+                            taxData?.tax_amount +
+                            (configData?.additional_charge
+                              ? configData?.additional_charge
+                              : 0)
                           )}
                         </Typography>
                       </Stack>

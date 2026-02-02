@@ -5,7 +5,7 @@ import { alpha, Stack } from "@mui/system";
 import { Box, Typography, useMediaQuery } from "@mui/material";
 import CampaignIcon from "@mui/icons-material/Campaign";
 import { useTheme } from "@emotion/react";
-import styled from "@emotion/styled";
+import { styled } from "@mui/material/styles";
 
 const BgBox = styled(Box)(({ theme, src }) => ({
   backgroundImage: `url(${src})`,

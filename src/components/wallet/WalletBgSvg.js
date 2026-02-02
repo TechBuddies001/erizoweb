@@ -1,5 +1,5 @@
 import React from "react";
-import { useTheme } from "@emotion/react";
+import { useTheme } from "@mui/material/styles";
 
 const WalletBgSvg = ({ width }) => {
   const theme = useTheme();

@@ -31,12 +31,12 @@ import { deliveryInstructions } from "../item-checkout/demoData";
 import CheckoutStepper from "../item-checkout/CheckoutStepper";
 import AddPaymentMethod from "../item-checkout/AddPaymentMethod";
 import useGetMostTrips from "../../../api-manage/hooks/react-query/useGetMostTrips";
-import { useTheme } from "@emotion/react";
+import { useTheme } from "@mui/material/styles";
 import { getGuestId, getToken } from "helper-functions/getToken";
 import { setOrderDetailsModal } from "redux/slices/offlinePaymentData";
-import {useGetTax} from "api-manage/hooks/react-query/order-place/useGetTax";
+import { useGetTax } from "api-manage/hooks/react-query/order-place/useGetTax";
 
-const PrescriptionCheckout = ({ storeId ,page}) => {
+const PrescriptionCheckout = ({ storeId, page }) => {
   const router = useRouter();
   const theme = useTheme();
   const dispatch = useDispatch();
@@ -55,8 +55,8 @@ const PrescriptionCheckout = ({ storeId ,page}) => {
   const { data: storeData, refetch } = useGetStoreDetails(storeId);
   const { guestUserInfo } = useSelector((state) => state.guestUserInfo);
   const guestId = getGuestId();
-  const [payableAmount,setPayableAmount] = useState(0);
-  const {mutate:taxMutate,data}=useGetTax()
+  const [payableAmount, setPayableAmount] = useState(0);
+  const { mutate: taxMutate, data } = useGetTax()
 
   useEffect(() => {
     refetch();

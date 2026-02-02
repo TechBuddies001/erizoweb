@@ -83,6 +83,22 @@
     "typescript": "5.9.3"
   },
   "resolutions": {
-    "@swc/helpers": "^0.5.0"
+    "@swc/helpers": "^0.5.0",
+    "@mui/x-date-pickers/react": "^19.0.0",
+    "@mui/x-date-pickers/react-dom": "^19.0.0",
+    "google-map-react/react": "^19.0.0",
+    "google-map-react/react-dom": "^19.0.0",
+    "react-apple-login/react": "^19.0.0",
+    "react-apple-login/react-dom": "^19.0.0",
+    "react-facebook-login/react": "^19.0.0",
+    "react-image-magnifiers/react": "^19.0.0",
+    "react-image-magnifiers/react-dom": "^19.0.0",
+    "react-image-magnify/react": "^19.0.0",
+    "react-query/react": "^19.0.0",
+    "react-redux/react": "^19.0.0",
+    "react-slick/react": "^19.0.0",
+    "react-slick/react-dom": "^19.0.0",
+    "simplebar-react/react": "^19.0.0",
+    "simplebar-react/react-dom": "^19.0.0"
   }
 }

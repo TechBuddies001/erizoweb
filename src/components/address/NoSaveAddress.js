@@ -3,7 +3,7 @@ import { CustomStackFullWidth } from "../../styled-components/CustomStyles.style
 import { Typography } from "@mui/material";
 import { t } from "i18next";
 import { Stack } from "@mui/system";
-import { useTheme } from "@emotion/react";
+import { useTheme } from "@mui/material/styles";
 
 const NoSaveAddress = ({ title, descriptions, image }) => {
   const theme = useTheme();

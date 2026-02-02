@@ -5,7 +5,7 @@ import { Stack } from "@mui/system";
 import { IconButton, Typography } from "@mui/material";
 import deleteIcon from "../../assets/delete.png";
 import CartIcon from "../added-cart-view/assets/CartIcon";
-import { useTheme } from "@emotion/react";
+import { useTheme } from "@mui/material/styles";
 import { CustomIconButton } from "styled-components/CustomButtons.style";
 import CustomDivider from "../CustomDivider";
 import { useDispatch, useSelector } from "react-redux";

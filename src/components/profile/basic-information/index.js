@@ -19,7 +19,7 @@ import AddAddressComponent from "../../address/add-new-address/AddAddressCompone
 import { useSelector } from "react-redux";
 import editIcon from "../asset/editIcon.png";
 import CustomImageContainer from "../../CustomImageContainer";
-import { useTheme } from "@emotion/react";
+import { useTheme } from "@mui/material/styles";
 import BorderColorIcon from "@mui/icons-material/BorderColor";
 import VerifiedIcon from "components/profile/VerifiedIcon";
 import ReportProblemIcon from "@mui/icons-material/ReportProblem";
@@ -124,9 +124,8 @@ const BasicInformation = (props) => {
                             marginLeft={{ xs: "13px", md: "10px" }}
                             fontSize={{ xs: "12px", md: "14px" }}
                           >
-                            {`${data?.f_name ? data?.f_name : ""} ${
-                              data?.l_name ? data?.l_name : ""
-                            }`}
+                            {`${data?.f_name ? data?.f_name : ""} ${data?.l_name ? data?.l_name : ""
+                              }`}
                           </Typography>
                         </Typography>
                         <Box

@@ -1,4 +1,4 @@
-import { useTheme } from "@emotion/react";
+import { useTheme } from "@mui/material/styles";
 import StarIcon from "@mui/icons-material/Star";
 import { Typography } from "@mui/material";
 import { Stack } from "@mui/system";

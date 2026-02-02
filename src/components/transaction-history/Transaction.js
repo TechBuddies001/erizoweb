@@ -4,7 +4,7 @@ import { Divider, Grid, Typography } from "@mui/material";
 import { CustomTypographyGray } from "../../styled-components/CustomStyles.style";
 import { t } from "i18next";
 import { Stack } from "@mui/system";
-import { useTheme } from "@emotion/react";
+import { useTheme } from "@mui/material/styles";
 import { getAmountWithSign } from "../../helper-functions/CardHelpers";
 
 const Transaction = ({ data, page }) => {

@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import styled from "@emotion/styled";
+import { styled } from "@mui/material/styles";
 import { Grid, Skeleton, useMediaQuery, useTheme } from "@mui/material";
 import { Box } from "@mui/system";
 import { useEffect, useState } from "react";
@@ -217,7 +217,7 @@ const NewArrivals = ({ bannerData }) => {
                             cardheight="300px"
                             cardFor="vertical"
                             noMargin
-                            // cardFor="popular items"
+                          // cardFor="popular items"
                           />
                         </Grid>
                       ))}

@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
-import { useTheme } from "@emotion/react";
-import styled from "@emotion/styled";
+import { useTheme } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import { AddCircle, CheckCircle, InfoOutlined } from "@mui/icons-material";
 import { Button, OutlinedInput, Skeleton, Typography } from "@mui/material";
 import Tooltip from "@mui/material/Tooltip";
@@ -67,7 +67,7 @@ const WalletBoxComponent = (props) => {
     onSubmit: async (values, helpers) => {
       try {
         formSubmitHandler(values);
-      } catch (err) {}
+      } catch (err) { }
     },
   });
 
@@ -242,7 +242,7 @@ const WalletBoxComponent = (props) => {
               </Typography>
             </Stack>
           </Stack>
-          {configData?.active_payment_method_list?.length>0 && configData?.add_fund_status ?  (
+          {configData?.active_payment_method_list?.length > 0 && configData?.add_fund_status ? (
             <Button
               sx={{
                 position: "absolute",
@@ -270,7 +270,7 @@ const WalletBoxComponent = (props) => {
               </Typography>
               <AddCircle />
             </Button>
-          ):null}
+          ) : null}
 
         </Stack>
       </CustomWalletStack>

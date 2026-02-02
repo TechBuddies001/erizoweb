@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable react-hooks/exhaustive-deps */
-import styled from "@emotion/styled";
+import { styled } from "@mui/material/styles";
 import { Typography } from "@mui/material";
 import { Box, Stack, alpha } from "@mui/system";
 import Image from "next/image";
